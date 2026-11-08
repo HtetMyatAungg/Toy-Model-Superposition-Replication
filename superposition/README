@@ -1,0 +1,9 @@
+# Toy model superposition replication
+
+The concept of superposition in a Neural Network is similar to quantum bits, but instead of a state that is uncertain until observed. In Neural Network, it describe storing of two or more features in a single neurons.
+
+## The Theory
+
+To test this superposition hypothesis, (Anthropic, 2022) trained two small model. The two models were: Linear Model, and a Relu Model. Each model is trained with random inputs.
+
+In the neural network, there is input dimension N neurons. The hidden layer has M neurons. N > M. In simple terms, the input dimension is larger than the hidden train layer, to test if the features are retained with lower hidden layer neurons. The output layer has the same N neurons as the input layer. neurons. The hidden layer has M neurons. N > M. In simple terms, the input dimension is larger than the hidden train layer, to test if the features are retained with lower hidden layer neurons. The output layer has the same N neurons as the input layer.
