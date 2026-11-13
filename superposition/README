@@ -1,9 +1,13 @@
-# Toy model superposition replication
+# Toy model superposition replication (https://arxiv.org/abs/2209.10652)
+This repository is a replication of a result from Anthropic's 2022 paper "Toy Models of Superposition".
 
-The concept of superposition in a Neural Network is similar to quantum bits, but instead of a state that is uncertain until observed. In Neural Network, it describe storing of two or more features in a single neurons.
+The claim I tested: Higher the sparsity of data, superposition occurs more.
 
-## The Theory
+## Summary + Polysematic Figure
 
-To test this superposition hypothesis, (Anthropic, 2022) trained two small model. The two models were: Linear Model, and a Relu Model. Each model is trained with random inputs.
+To test this superposition hypothesis, we trained two small model. The two models were: Linear Model, and a Relu Model.
 
-In the neural network, there is input dimension N neurons. The hidden layer has M neurons. N > M. In simple terms, the input dimension is larger than the hidden train layer, to test if the features are retained with lower hidden layer neurons. The output layer has the same N neurons as the input layer. neurons. The hidden layer has M neurons. N > M. In simple terms, the input dimension is larger than the hidden train layer, to test if the features are retained with lower hidden layer neurons. The output layer has the same N neurons as the input layer.
+
+## Bug Fixes
+Bug fix (13 Nov 2026): earlier versions created each model once, outside the seed and sparsity loops, so every run continued training the previous run’s weights instead of starting fresh; each run now trains a newly initialised model, and the figures above come from the corrected version.
+

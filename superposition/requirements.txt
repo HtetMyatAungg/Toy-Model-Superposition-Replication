@@ -1,0 +1,12 @@
+# Python 3.14
+# Install: pip install -r requirement.txt
+# CPU-only PyTorch (smaller download):
+#   pip install -r requirement.txt --index-url https://download.pytorch.org/whl/cpu --extra-index-url https://pypi.org/simple
+
+torch==2.14.1
+torchvision==0.29.2
+numpy==2.5.4
+matplotlib==3.11.2
+
+# To run the notebook
+ipykernel==7.4.0
