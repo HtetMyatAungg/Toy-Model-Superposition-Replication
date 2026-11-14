@@ -46,7 +46,7 @@ Each bar is the norm of one feature's weight column. A norm close to 1 means the
 
 ### 2. How ReLU fits more than 5 features: antipodal pairs
 
-![Gram matrices](superposition_weights_gram_maxtrix.png) [TODO: check file name]
+![Gram matrices](superposition_weights_gram_maxtrix(WTW).png)
 
 These are the Gram matrices (WᵀW). Square (i, j) shows how much feature i and feature j point in the same direction: red means same direction, blue means opposite, white means unrelated. Each row of plots shares one colour scale.
 
@@ -72,11 +72,11 @@ At S ≥ 0.99, ReLU stops using clean pairs and packs features into more complex
 
 ![1D polysemanticity](polysemantic_1d.png)
 
-To check the idea at its simplest, I trained a ReLU model with 2 features and 1 hidden dimension. [TODO: confirm] The learned weights converge to the form [a, −a], the two features point in opposite directions along the single dimension, which is one antipodal pair.
+To check the idea at its simplest, I trained a ReLU model with 2 features and 1 hidden dimension. The learned weights converge to the form [a, −a], the two features point in opposite directions along the single dimension, which is one antipodal pair.
 
 ### 4. Extension: sigmoid
 
-The paper only uses ReLU, so I wanted to see if superposition also happens with sigmoid. Before running it, I predicted [TODO: your prediction].
+The paper only uses ReLU, so I wanted to see if superposition also happens with sigmoid. Before running it, I predicted superposition would increase as sparsity increases.
 
 What happened:
 
@@ -88,7 +88,7 @@ Sigmoid's head features also have norms around 2.5 instead of 1. That is expecte
 
 ## Bug fix
 
-In my first version, the same model object was reused across seeds and sparsity values, so every run after the first started from weights that were already trained. [TODO: how you noticed]. After I fixed it so every run trains a fresh model, [TODO: which figures changed and how]. All figures in this README are from after the fix.
+In my first version, the same model object was reused across seeds and sparsity values, so every run after the first started from weights that were already trained. The loss started very low almost the same as the last epoch. After I fixed it so every run trains a fresh model, RELU model in superposition_weights_bar and superposition_weights_map figures showed more features as sparsity increases. All figures in this README are from after the fix.
 
 ## Limitations
 
